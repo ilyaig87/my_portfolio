@@ -30,13 +30,16 @@ header {
 /* img */
 
 .me {
-  background: linear-gradient(var(--color-primary), transparent);
   width: 22rem;
   height: 30rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 4rem;
+}
+
+.me img {
+  border-radius: 3rem;
 }
 
 /* mq */
