@@ -18,13 +18,11 @@ const About = () => (
         <div className='about-cards'>
           <article className='about-card'>
             <AiFillFolderOpen className='about-icon' />
-            <h5>Projects</h5>
-            <small>Go to see</small>
+            <h5>My Projects</h5>
           </article>
           <article className='about-card'>
             <ImBooks className='about-icon' />
             <h5>My Knowledge</h5>
-            <small></small>
           </article>
         </div>
         <p>

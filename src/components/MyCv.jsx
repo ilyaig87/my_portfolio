@@ -8,7 +8,7 @@ const MyCv = () => {
         Download CV
       </a>
       <a href='#contact' className='btn btn-primary'>
-        Send me a message
+        Lets talk
       </a>
     </div>
   )

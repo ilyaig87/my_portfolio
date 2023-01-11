@@ -42,6 +42,7 @@
   background: transparent;
   border-color: var(--color-primary-variant);
   cursor: default;
+  background: var(--color-light);
 }
 
 .about-icon {

@@ -15,7 +15,8 @@
   --color-primary: rgb(3, 93, 74);
   --color-primary-variant: rgb(6, 27, 90);
   --color-white: #fff;
-  --color-light: rgb(165, 216, 255);
+  --color-dark: rgb(0, 0, 0);
+  --color-light: rgb(56, 88, 113);
 
   --transition: all 400ms ease;
 
