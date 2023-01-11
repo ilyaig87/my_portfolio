@@ -1,8 +1,8 @@
-import '../assets/styles/about.scss'
+import '../assets/styles/about.css'
 
 const About = () => (
-  <section className='about-container'>
-    <div className='about'></div>
+  <section id='about' className='about-container'>
+    About
   </section>
 )
 

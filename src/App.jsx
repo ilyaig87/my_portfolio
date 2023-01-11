@@ -1,4 +1,4 @@
-import './App.scss'
+import './App.css'
 
 import {
   About,
@@ -8,17 +8,19 @@ import {
   Header,
   Nav,
   Footer,
+  Services,
 } from './components/index.js'
 
 const App = () => {
   return (
     <div>
       <Header />
-      <Portfolio />
       <Nav />
       <About />
       <Experience />
+      <Portfolio />
       <Contact />
+      <Services />
       <Footer />
     </div>
   )

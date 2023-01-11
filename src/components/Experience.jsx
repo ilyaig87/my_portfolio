@@ -1,7 +1,11 @@
-import '../assets/styles/experience.scss'
+import '../assets/styles/experience.css'
 
 const Experience = () => {
-  return <div className='experience-container'>Experience</div>
+  return (
+    <section id='experience' className='experience-container'>
+      Experience
+    </section>
+  )
 }
 
 export default Experience

@@ -1,5 +1,9 @@
-import '../assets/styles/contact.scss'
+import '../assets/styles/contact.css'
 
-const Contact = () => <div className='contact-container'>contact</div>
+const Contact = () => (
+  <section id='contact' className='contact-container'>
+    contact
+  </section>
+)
 
 export default Contact

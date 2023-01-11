@@ -1,8 +1,11 @@
-import React from 'react'
-import '../assets/styles/portfolio.scss'
+import '../assets/styles/portfolio.css'
 
 const Portfolio = () => {
-  return <div className='portfolio-container'>Portfolio</div>
+  return (
+    <section id='portfolio' className='portfolio-container'>
+      Portfolio
+    </section>
+  )
 }
 
 export default Portfolio
