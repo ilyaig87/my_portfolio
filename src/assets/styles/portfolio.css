@@ -12,7 +12,7 @@
 }
 
 .portfolio-img {
-  height: 16rem;
+  max-height: 16rem;
   border-radius: 2rem;
 }
 
@@ -49,8 +49,5 @@
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-  .portfolio-item-image {
-    overflow: auto;
   }
 }
