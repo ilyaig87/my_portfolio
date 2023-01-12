@@ -1,11 +1,7 @@
 import '../assets/styles/services.css'
 
 const Services = () => {
-  return (
-    <section id='services' className='service-container'>
-      Services
-    </section>
-  )
+  return <section id='services'></section>
 }
 
 export default Services
