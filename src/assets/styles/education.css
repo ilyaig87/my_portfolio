@@ -1,0 +1,31 @@
+.education {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.education-section {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.education-section:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+}
+
+@media screen and (max-width: 1024px) {
+  .education {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .education {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
