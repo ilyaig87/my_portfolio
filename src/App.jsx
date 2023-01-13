@@ -9,6 +9,7 @@ import {
   Nav,
   Footer,
   Services,
+  Education,
 } from './components/index.js'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <About />
       <Experience />
       <Portfolio />
+      <Education />
       <Contact />
       <Services />
       <Footer />

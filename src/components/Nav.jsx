@@ -2,7 +2,7 @@ import '../assets/styles/nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiUser, BiBookOpen } from 'react-icons/bi'
 import { RiServiceLine } from 'react-icons/ri'
-import { TbMessageCircle } from 'react-icons/tb'
+import { TbMessageCircle, TbSchool } from 'react-icons/tb'
 import { useState } from 'react'
 
 const Nav = () => {
@@ -30,6 +30,13 @@ const Nav = () => {
         className={activeNav === '#experience' ? 'active' : ''}
       >
         <BiBookOpen />
+      </a>
+      <a
+        href='#education'
+        onClick={() => setActiveNav('#education')}
+        className={activeNav === '#education' ? 'active' : ''}
+      >
+        <TbSchool />
       </a>
       <a
         href='#contact'
