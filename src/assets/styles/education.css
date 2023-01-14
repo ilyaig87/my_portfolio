@@ -1,9 +1,10 @@
 .education {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
 .education-section {
+  margin-top: 0;
   background: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 2rem;
@@ -16,10 +17,43 @@
   background: transparent;
 }
 
+.education-complex {
+  color: var(--color-white);
+  gap: 2rem;
+  grid-template-columns: 25% 40%;
+  max-height: 5rem;
+}
+
+.education-prof {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 11rem; */
+}
+
+.education-img {
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+}
+
+.education-about {
+  padding-top: 1.2rem;
+  text-align: center;
+  color: var(--color-light);
+}
+
 @media screen and (max-width: 1024px) {
   .education {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 1.2rem;
+  }
+  .education-complex {
+    align-items: flex-start;
+  }
+  .education-img {
+    align-items: flex-start;
+    width: 6rem;
   }
 }
 
@@ -27,5 +61,16 @@
   .education {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .education-img {
+    width: 4rem;
+  }
+  .education-complex {
+    grid-template-columns: 10% 75%;
+    align-items: center;
+    justify-content: center;
+  }
+  .education-about {
+    margin: 0;
   }
 }
