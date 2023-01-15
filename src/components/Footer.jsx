@@ -36,10 +36,10 @@ const Footer = () => {
 
       <div className='footer-socials flex'>
         <a href='https://github.com/ilyaig87' target='_blank'>
-          <BsLinkedin />
+          <AiFillGithub />
         </a>
         <a href='https://www.linkedin.com/in/ilya-griss/' target='_blank'>
-          <AiFillGithub />
+          <BsLinkedin />
         </a>
       </div>
 
