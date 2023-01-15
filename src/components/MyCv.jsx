@@ -5,7 +5,7 @@ const MyCv = () => {
   return (
     <div className='my-cv'>
       <a href={MyCV} download className='btn'>
-        Download CV
+        Download my CV
       </a>
       <a href='#contact' className='btn btn-primary'>
         Lets talk

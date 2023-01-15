@@ -109,6 +109,11 @@ img {
   object-fit: cover;
 }
 
+::selection {
+  background-color: var(--color-light);
+  color: rgb(0, 0, 0);
+}
+
 /* mq */
 
 @media screen and (max-width: 1024px) {
@@ -127,7 +132,7 @@ img {
   }
 
   section > h2 {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
   }
 }
 

@@ -8,7 +8,7 @@ import {
   Header,
   Nav,
   Footer,
-  Services,
+  JobExperience,
   Education,
 } from './components/index.js'
 
@@ -20,9 +20,9 @@ const App = () => {
       <About />
       <Experience />
       <Portfolio />
+      <JobExperience />
       <Education />
       <Contact />
-      <Services />
       <Footer />
     </div>
   )

@@ -8,7 +8,7 @@ const About = () => {
   const [activeNav, setActiveNav] = useState('#')
 
   return (
-    <section id='about-container'>
+    <section id='about'>
       <h5>Get To Know</h5>
       <h2>About Me</h2>
 

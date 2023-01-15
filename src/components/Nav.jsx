@@ -2,6 +2,7 @@ import '../assets/styles/nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiUser, BiBookOpen } from 'react-icons/bi'
 import { RiServiceLine } from 'react-icons/ri'
+import { MdWorkOutline } from 'react-icons/md'
 import { TbMessageCircle, TbSchool } from 'react-icons/tb'
 import { useState } from 'react'
 
@@ -32,6 +33,13 @@ const Nav = () => {
         <BiBookOpen />
       </a>
       <a
+        href='#job-experience'
+        onClick={() => setActiveNav('#job-experience')}
+        className={activeNav === '#job-experience' ? 'active' : ''}
+      >
+        <MdWorkOutline />
+      </a>
+      <a
         href='#education'
         onClick={() => setActiveNav('#education')}
         className={activeNav === '#education' ? 'active' : ''}
@@ -44,13 +52,6 @@ const Nav = () => {
         className={activeNav === '#contact' ? 'active' : ''}
       >
         <TbMessageCircle />
-      </a>
-      <a
-        href='#services'
-        onClick={() => setActiveNav('#services')}
-        className={activeNav === '#services' ? 'active' : ''}
-      >
-        <RiServiceLine />
       </a>
     </nav>
   )
