@@ -27,6 +27,7 @@
 .experience-content {
   grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
+  padding-bottom: 1rem;
 }
 
 .experience-details {
@@ -52,7 +53,6 @@
   }
 
   .experience-content {
-    padding: 1rem;
   }
 }
 

@@ -35,9 +35,6 @@ const Footer = () => {
       </ul>
 
       <div className='footer-socials flex'>
-        <a href='https://.facebook.com'>
-          <FaFacebook />
-        </a>
         <a href='https://github.com'>
           <BsLinkedin />
         </a>

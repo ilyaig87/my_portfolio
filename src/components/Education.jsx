@@ -21,9 +21,9 @@ const Education = () => {
       profession: 'Practical Engineer',
       date: '2Ol6-2Ol9',
       text: `Finished a practical engineer.
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-      perferendis corrupti repellat nisi hic voluptate? Deserunt saepe
-      non debitis porro.`,
+      I studied in the format of evening studies,
+       I gained a lot of knowledge in managing a construction site,
+        everything related to statics, construction and geodesy.`,
       img: SHENKAR,
     },
   ]
