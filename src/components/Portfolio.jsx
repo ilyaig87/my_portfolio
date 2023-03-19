@@ -1,6 +1,7 @@
 import '../assets/styles/portfolio.css'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
 import IGAMES from '../../src/assets/images/cover.jpg'
+import CRITIC from '../../src/assets/images/critic.png'
 
 const Portfolio = () => {
   const data = [
@@ -17,6 +18,13 @@ const Portfolio = () => {
       title: 'This is a game site!',
       github: 'https://github.com/ilyaig87/Memory-Game',
       demo: 'https://i-games.netlify.app/',
+    },
+    {
+      id: 3,
+      image: CRITIC,
+      title: 'This is a epic movie and tv series site!',
+      github: 'https://github.com/ilyaig87/Critic',
+      demo: 'https://critics.netlify.app',
     },
   ]
 
