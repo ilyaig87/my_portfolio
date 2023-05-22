@@ -2,6 +2,7 @@ import '../assets/styles/portfolio.css'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
 import IGAMES from '../../src/assets/images/cover.jpg'
 import CRITIC from '../../src/assets/images/critic.png'
+import WORKERR from '../../src/assets/images/workerr.png'
 
 const Portfolio = () => {
   const data = [
@@ -14,10 +15,13 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      image: IGAMES,
-      title: 'This is a game site!',
-      github: 'https://github.com/ilyaig87/Memory-Game',
-      demo: 'https://i-games.netlify.app/',
+      image: WORKERR,
+      title: `Workerr, (bootcamp's final project) is a full-stack web-app built
+      using React.js, Express-Node.js that
+      emulates Fivers's functionality. The app also uses a MongoDB
+      database.`,
+      github: 'https://github.com/ilyaig87/worker',
+      demo: 'https://react-reviews-vus7.onrender.com/#/',
     },
     {
       id: 3,
@@ -25,6 +29,13 @@ const Portfolio = () => {
       title: 'This is a epic movie and tv series site!',
       github: 'https://github.com/ilyaig87/Critic',
       demo: 'https://critics.netlify.app',
+    },
+    {
+      id: 4,
+      image: IGAMES,
+      title: 'This is a game site!',
+      github: 'https://github.com/ilyaig87/Memory-Game',
+      demo: 'https://i-games.netlify.app/',
     },
   ]
 
