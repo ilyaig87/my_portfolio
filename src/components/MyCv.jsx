@@ -1,5 +1,5 @@
 import React from 'react'
-import MyCV from '../assets/downloads/MyCV.pdf'
+import MyCV from '../assets/downloads/Ilya Griss- CV.pdf'
 
 const MyCv = () => {
   return (
