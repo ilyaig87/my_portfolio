@@ -1,7 +1,7 @@
 import '../assets/styles/about.css'
 import Me from '../assets/images/me3.jpg'
 import { ImBooks } from 'react-icons/im'
-import { AiFillFolderOpen } from 'react-icons/ai'
+import { BsBriefcase } from 'react-icons/bs'
 import { FiAward } from 'react-icons/fi'
 
 const About = () => {
@@ -19,36 +19,37 @@ const About = () => {
 
         <div className='about-content'>
           <div className='about-cards'>
-            <a href='#portfolio' className='reveal'>
-              <article className='about-card'>
-                <AiFillFolderOpen className='about-icon' />
-                <h5>My Projects</h5>
-                <small>8+ shipped</small>
-              </article>
-            </a>
-            <a href='#experience' className='reveal'>
-              <article className='about-card'>
-                <ImBooks className='about-icon' />
-                <h5>My Knowledge</h5>
-                <small>10+ technologies</small>
-              </article>
-            </a>
-            <a href='#education' className='reveal'>
-              <article className='about-card'>
-                <FiAward className='about-icon' />
-                <h5>Education</h5>
-                <small>Coding Academy</small>
-              </article>
-            </a>
+            <article className='about-card reveal'>
+              <BsBriefcase className='about-icon' />
+              <h5>Experience</h5>
+              <small>Full-Stack · 2+ yrs</small>
+            </article>
+            <article className='about-card reveal'>
+              <ImBooks className='about-icon' />
+              <h5>Tech Stack</h5>
+              <small>React · TS · PHP</small>
+            </article>
+            <article className='about-card reveal'>
+              <FiAward className='about-icon' />
+              <h5>Education</h5>
+              <small>Coding Academy</small>
+            </article>
           </div>
 
           <p className='reveal'>
-            I am a driven, devoted and enthusiastic developer seeking my first
-            opportunity as a Full Stack Developer after graduating the Coding
-            Academy's 640-hour bootcamp. I love turning ideas into polished,
-            performant products — and I want to make an impact as part of a team
-            that's passionate about its goals.
+            I'm a Full-Stack Developer specializing in React, TypeScript and
+            PHP/Yii2, with end-to-end ownership of a business-critical CRM and
+            vehicle-financing platform at Wheelie Car Finance. I turn complex
+            operational requirements into reliable production features —
+            financial workflows, database architecture and third-party API
+            integrations — with a sharp focus on performance and clean UX.
           </p>
+
+          <div className='about-langs reveal'>
+            <span>🇮🇱 Hebrew — Native</span>
+            <span>🇬🇧 English — Fluent</span>
+            <span>🇷🇺 Russian — Native</span>
+          </div>
 
           <a href='#contact' className='btn btn-primary reveal'>
             Let's talk

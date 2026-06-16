@@ -1,42 +1,43 @@
 import '../assets/styles/jobExperience.css'
 import DATA from '../assets/images/data-map.png'
-import KAV from '../assets/images/kav.png'
-import BENEDICT from '../assets/images/benedict.jpg'
+import { FaCarSide, FaLaptopCode } from 'react-icons/fa'
 
 const data = [
   {
     id: 1,
-    title: 'Data-Map Group',
-    profession: 'AutoCAD Drafter',
-    date: '2020 — 2022',
+    title: 'Wheelie Car Finance',
+    profession: 'Full-Stack Developer',
+    date: '2024 — Present',
+    icon: <FaCarSide />,
     points: [
-      'Managed several projects as the main focal point, facilitating communication between all counterparts while meeting goals on time.',
-      'Implemented an efficient work procedure that saved the team valuable time.',
+      "Primary developer and technical owner of the company's business-critical CRM and vehicle-financing platform, built with React, PHP/Yii2 and MySQL.",
+      'Designed and implemented end-to-end financing workflows — customer onboarding, loan calculations, document processing, status tracking and back-office operations.',
+      'Built financial calculators and workflow automations that cut manual application processing time by ~40%.',
+      'Reduced average page load times by ~35% through query optimization, backend caching and frontend lazy loading.',
     ],
-    img: DATA,
   },
   {
     id: 2,
-    title: 'Kav-Medida Group',
-    profession: 'AutoCAD Drafter',
-    date: '2018 — 2020',
+    title: 'Freelance',
+    profession: 'Full-Stack Developer',
+    date: '2022 — 2024',
+    icon: <FaLaptopCode />,
     points: [
-      'Managed multiple teams by coordinating, planning and implementing daily projects.',
-      'Identified project requirements and modified designs to company standards via direct coordination with engineers and project managers.',
+      'Delivered responsive web applications using React, Node.js, Express and SQL/NoSQL databases for a range of client business needs.',
+      'Built reusable UI components, secure authentication systems, custom admin dashboards and third-party REST API integrations.',
+      'Worked directly with clients to scope MVPs and ship production features from wireframes to hosting — improving load times by up to 50%.',
     ],
-    img: KAV,
   },
   {
     id: 3,
-    title: 'Benedict Restaurant',
-    profession: 'Operations & Bar Manager',
-    date: '2012 — 2018',
+    title: 'DataMap G.I.S Group',
+    profession: 'AutoCAD Drafter',
+    date: '2020 — 2022',
+    img: DATA,
     points: [
-      'Managed all operational aspects of the business to ensure goals were met.',
-      'Recruited, trained and led large teams, defining work processes and targets.',
-      'Responsible for short- & long-term commercial planning.',
+      'Created technical drawings and engineering schematics in a structured, deadline-driven technical environment.',
+      'Coordinated between counterparts and implemented efficient procedures that saved the team valuable time.',
     ],
-    img: BENEDICT,
   },
 ]
 
@@ -47,13 +48,17 @@ const JobExperience = () => {
       <h2 className='reveal'>Work Experience</h2>
 
       <div className='container timeline'>
-        {data.map(({ id, title, profession, date, points, img }) => (
+        {data.map(({ id, title, profession, date, points, img, icon }) => (
           <article className='timeline-item reveal' key={id}>
             <span className='timeline-dot'></span>
             <div className='timeline-card'>
               <div className='timeline-head'>
                 <div className='timeline-logo'>
-                  <img src={img} alt={title} />
+                  {img ? (
+                    <img src={img} alt={title} />
+                  ) : (
+                    <span className='timeline-logo-icon'>{icon}</span>
+                  )}
                 </div>
                 <div>
                   <h3>{title}</h3>

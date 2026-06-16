@@ -16,7 +16,7 @@ const Header = () => {
         <div className='header-text'>
           <span className='availability-badge'>
             <span className='pulse-dot'></span>
-            Available for new opportunities
+            Open to new opportunities
           </span>
 
           <h5>Hello, I'm</h5>
@@ -24,10 +24,11 @@ const Header = () => {
             Ilya Griss
             <span className='wave'>👋</span>
           </h1>
-          <h2 className='header-role gradient-text'>Fullstack Developer</h2>
+          <h2 className='header-role gradient-text'>Full-Stack Developer</h2>
           <p className='header-tagline'>
-            I craft fast, accessible and beautiful web experiences with React,
-            Node.js and a sharp eye for detail.
+            I build production-grade web platforms with React, TypeScript and
+            PHP/Yii2 — turning complex business logic into fast, reliable
+            products.
           </p>
 
           <MyCv />
@@ -35,16 +36,16 @@ const Header = () => {
 
           <ul className='header-stats'>
             <li>
-              <strong>640+</strong>
-              <span>Bootcamp hours</span>
+              <strong>2+</strong>
+              <span>Years experience</span>
             </li>
             <li>
-              <strong>8+</strong>
-              <span>Projects shipped</span>
+              <strong>~40%</strong>
+              <span>Faster workflows</span>
             </li>
             <li>
-              <strong>10+</strong>
-              <span>Technologies</span>
+              <strong>~50%</strong>
+              <span>Faster load times</span>
             </li>
           </ul>
         </div>
@@ -56,7 +57,7 @@ const Header = () => {
               <img src={ME} alt='Ilya Griss' />
             </div>
             <span className='floating-chip chip-react'>⚛️ React</span>
-            <span className='floating-chip chip-node'>🟢 Node.js</span>
+            <span className='floating-chip chip-node'>🔷 TypeScript</span>
           </div>
         </div>
       </div>

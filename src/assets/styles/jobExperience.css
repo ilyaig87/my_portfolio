@@ -78,6 +78,16 @@
   object-fit: cover;
 }
 
+.timeline-logo-icon {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  color: var(--color-primary);
+  background: var(--grad-brand-soft);
+}
+
 .timeline-head h3 {
   font-size: 1.2rem;
 }

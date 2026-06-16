@@ -78,7 +78,24 @@
 
 .about-content p {
   color: var(--color-light);
+  margin-bottom: 1.6rem;
+}
+
+.about-langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin-bottom: 2rem;
+}
+
+.about-langs span {
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  border-radius: 100px;
+  color: var(--color-light);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
 }
 
 /* mq */

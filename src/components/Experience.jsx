@@ -1,45 +1,69 @@
 import '../assets/styles/experience.css'
 import {
   SiReact,
+  SiTypescript,
   SiJavascript,
   SiHtml5,
   SiCss3,
-  SiVuedotjs,
-  SiBootstrap,
-  SiMongodb,
-  SiNodedotjs,
+  SiSass,
   SiPhp,
-  SiMysql,
+  SiNodedotjs,
   SiExpress,
+  SiMysql,
+  SiPostgresql,
+  SiMongodb,
   SiGit,
+  SiAmazon,
+  SiGithubactions,
 } from 'react-icons/si'
+import { TbApi } from 'react-icons/tb'
 
-const frontend = [
-  { name: 'React', level: 'Experienced', icon: <SiReact />, color: '#61dafb' },
-  { name: 'JavaScript', level: 'Experienced', icon: <SiJavascript />, color: '#f7df1e' },
-  { name: 'HTML5', level: 'Experienced', icon: <SiHtml5 />, color: '#e34f26' },
-  { name: 'CSS3', level: 'Experienced', icon: <SiCss3 />, color: '#1572b6' },
-  { name: 'Vue', level: 'Intermediate', icon: <SiVuedotjs />, color: '#42b883' },
-  { name: 'Bootstrap', level: 'Experienced', icon: <SiBootstrap />, color: '#7952b3' },
+const groups = [
+  {
+    title: 'Frontend',
+    skills: [
+      { name: 'React', icon: <SiReact />, color: '#61dafb' },
+      { name: 'TypeScript', icon: <SiTypescript />, color: '#3178c6' },
+      { name: 'JavaScript', icon: <SiJavascript />, color: '#f7df1e' },
+      { name: 'HTML5', icon: <SiHtml5 />, color: '#e34f26' },
+      { name: 'CSS3', icon: <SiCss3 />, color: '#1572b6' },
+      { name: 'SCSS', icon: <SiSass />, color: '#cd6799' },
+    ],
+  },
+  {
+    title: 'Backend',
+    skills: [
+      { name: 'PHP / Yii2', icon: <SiPhp />, color: '#777bb4' },
+      { name: 'Node.js', icon: <SiNodedotjs />, color: '#3c873a' },
+      { name: 'Express', icon: <SiExpress />, color: '#dddddd' },
+      { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
+    ],
+  },
+  {
+    title: 'Databases',
+    skills: [
+      { name: 'MySQL', icon: <SiMysql />, color: '#4479a1' },
+      { name: 'PostgreSQL', icon: <SiPostgresql />, color: '#4169e1' },
+      { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248' },
+    ],
+  },
+  {
+    title: 'Tools & DevOps',
+    skills: [
+      { name: 'Git', icon: <SiGit />, color: '#f05032' },
+      { name: 'AWS', icon: <SiAmazon />, color: '#ff9900' },
+      { name: 'CI/CD', icon: <SiGithubactions />, color: '#2088ff' },
+    ],
+  },
 ]
 
-const backend = [
-  { name: 'Node.js', level: 'Experienced', icon: <SiNodedotjs />, color: '#3c873a' },
-  { name: 'Express', level: 'Experienced', icon: <SiExpress />, color: '#dddddd' },
-  { name: 'MongoDB', level: 'Experienced', icon: <SiMongodb />, color: '#47a248' },
-  { name: 'MySQL', level: 'Intermediate', icon: <SiMysql />, color: '#4479a1' },
-  { name: 'PHP', level: 'Intermediate', icon: <SiPhp />, color: '#777bb4' },
-  { name: 'Git', level: 'Experienced', icon: <SiGit />, color: '#f05032' },
-]
-
-const SkillCard = ({ name, level, icon, color }) => (
+const SkillCard = ({ name, icon, color }) => (
   <article className='skill-card reveal'>
     <span className='skill-icon' style={{ color }}>
       {icon}
     </span>
     <div className='skill-meta'>
       <h4>{name}</h4>
-      <small className='text-light'>{level}</small>
     </div>
   </article>
 )
@@ -51,23 +75,16 @@ const Experience = () => {
       <h2 className='reveal'>My Tech Stack</h2>
 
       <div className='container experience-container'>
-        <div className='experience-panel reveal'>
-          <h3>Frontend Development</h3>
-          <div className='skills-grid'>
-            {frontend.map((skill) => (
-              <SkillCard key={skill.name} {...skill} />
-            ))}
+        {groups.map(({ title, skills }) => (
+          <div className='experience-panel reveal' key={title}>
+            <h3>{title}</h3>
+            <div className='skills-grid'>
+              {skills.map((skill) => (
+                <SkillCard key={skill.name} {...skill} />
+              ))}
+            </div>
           </div>
-        </div>
-
-        <div className='experience-panel reveal'>
-          <h3>Backend Development</h3>
-          <div className='skills-grid'>
-            {backend.map((skill) => (
-              <SkillCard key={skill.name} {...skill} />
-            ))}
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   )
