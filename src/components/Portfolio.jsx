@@ -45,7 +45,7 @@ const data = [
       'A playful memory game with smooth interactions and score tracking.',
     tags: ['JavaScript', 'Game'],
     github: 'https://github.com/ilyaig87/Memory-Game',
-    demo: 'https://i-games.netlify.app/',
+    demo: 'https://memory-game-tawny-eta.vercel.app/',
   },
 ]
 
