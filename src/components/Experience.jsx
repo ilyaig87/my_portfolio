@@ -15,6 +15,7 @@ import {
   SiGit,
   SiAmazon,
   SiGithubactions,
+  SiGooglechrome,
 } from 'react-icons/si'
 import { TbApi } from 'react-icons/tb'
 
@@ -36,7 +37,6 @@ const groups = [
       { name: 'PHP / Yii2', icon: <SiPhp />, color: '#777bb4' },
       { name: 'Node.js', icon: <SiNodedotjs />, color: '#3c873a' },
       { name: 'Express', icon: <SiExpress />, color: '#dddddd' },
-      { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
     ],
   },
   {
@@ -51,7 +51,9 @@ const groups = [
     title: 'Tools & DevOps',
     skills: [
       { name: 'Git', icon: <SiGit />, color: '#f05032' },
+      { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
       { name: 'AWS', icon: <SiAmazon />, color: '#ff9900' },
+      { name: 'Chrome DevTools', icon: <SiGooglechrome />, color: '#4285f4' },
       { name: 'CI/CD', icon: <SiGithubactions />, color: '#2088ff' },
     ],
   },

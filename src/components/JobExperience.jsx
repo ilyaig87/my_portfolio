@@ -10,10 +10,12 @@ const data = [
     date: '2024 — Present',
     icon: <FaCarSide />,
     points: [
-      "Primary developer and technical owner of the company's business-critical CRM and vehicle-financing platform, built with React, PHP/Yii2 and MySQL.",
-      'Designed and implemented end-to-end financing workflows — customer onboarding, loan calculations, document processing, status tracking and back-office operations.',
-      'Built financial calculators and workflow automations that cut manual application processing time by ~40%.',
-      'Reduced average page load times by ~35% through query optimization, backend caching and frontend lazy loading.',
+      "Serve as the primary developer and technical owner of the company's business-critical CRM and vehicle-financing platform using React, PHP/Yii2, and MySQL.",
+      'Designed and implemented end-to-end vehicle-financing workflows covering customer onboarding, loan calculations, document processing, status tracking, and internal back-office operations.',
+      'Translate business and operational requirements into production-ready features, managing database schema design and building secure backend services.',
+      'Developed financial calculators and workflow automations that reduced manual application processing time by approximately 40% by centralizing customer, vehicle, and financing data within the CRM.',
+      'Reduced average page load times by approximately 35% through database query optimization, backend caching, and frontend lazy loading.',
+      'Provide ongoing production support for a business-critical system, diagnose cross-stack issues, and deliver urgent fixes and high-priority features with minimal disruption to daily operations.',
     ],
   },
   {
@@ -23,9 +25,10 @@ const data = [
     date: '2022 — 2024',
     icon: <FaLaptopCode />,
     points: [
-      'Delivered responsive web applications using React, Node.js, Express and SQL/NoSQL databases for a range of client business needs.',
-      'Built reusable UI components, secure authentication systems, custom admin dashboards and third-party REST API integrations.',
-      'Worked directly with clients to scope MVPs and ship production features from wireframes to hosting — improving load times by up to 50%.',
+      'Developed and delivered responsive web applications using React, Node.js, Express, and relational/NoSQL databases for various client business needs.',
+      'Built reusable UI components, secure authentication systems, custom admin dashboards, and seamless integrations with third-party REST APIs.',
+      'Worked directly with clients to define technical requirements, scope MVPs, and deploy production features from initial wireframes to server hosting.',
+      'Diagnosed frontend bottlenecks using Chrome DevTools and improved page load times by up to 50% through asset optimization, code splitting, and state management improvements.',
     ],
   },
   {
@@ -35,8 +38,7 @@ const data = [
     date: '2020 — 2022',
     img: DATA,
     points: [
-      'Created technical drawings and engineering schematics in a structured, deadline-driven technical environment.',
-      'Coordinated between counterparts and implemented efficient procedures that saved the team valuable time.',
+      'Created technical drawings and engineering schematics while working in a structured, deadline-driven technical environment.',
     ],
   },
 ]

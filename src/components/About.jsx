@@ -37,12 +37,12 @@ const About = () => {
           </div>
 
           <p className='reveal'>
-            I'm a Full-Stack Developer specializing in React, TypeScript and
-            PHP/Yii2, with end-to-end ownership of a business-critical CRM and
-            vehicle-financing platform at Wheelie Car Finance. I turn complex
-            operational requirements into reliable production features —
-            financial workflows, database architecture and third-party API
-            integrations — with a sharp focus on performance and clean UX.
+            Full-Stack Developer specializing in React, TypeScript, PHP/Yii2,
+            and MySQL, with end-to-end responsibility for a business-critical
+            CRM and vehicle-financing platform used daily by sales, finance, and
+            back-office teams. Experienced in translating complex operational
+            requirements into reliable production features, financial workflows,
+            database architecture, and third-party API integrations.
           </p>
 
           <div className='about-langs reveal'>

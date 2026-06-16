@@ -6,7 +6,7 @@ const data = [
   {
     id: 1,
     title: 'Coding Academy',
-    profession: 'Fullstack Web Developer',
+    profession: 'Full-Stack Web Development Program',
     date: 'Jul 2022 — Nov 2022',
     text: `An intensive 4-month, full-time (8:30–18:30) program covering data
     structures, networking and OOP, plus hands-on projects in JavaScript,
