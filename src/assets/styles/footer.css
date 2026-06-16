@@ -1,64 +1,79 @@
 footer {
-  background: var(--color-primary-variant);
+  margin-top: 8rem;
+  padding: 4rem 0 2.5rem;
   text-align: center;
-  padding: 3rem 0;
-  font-size: 0.9rem;
-  margin-top: 5rem;
-}
-
-footer a {
-  color: var(--color-light);
-  font-size: larger;
+  border-top: 1px solid var(--glass-border);
+  background: linear-gradient(180deg, transparent, rgba(168, 85, 247, 0.06));
 }
 
 .footer-logo {
-  font-size: 2rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
   display: inline-block;
 }
 
+.footer-tagline {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0.6rem auto 2rem;
+  max-width: 30rem;
+}
+
 .footer-links {
-  flex: wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin: 0 auto 3rem;
+  gap: 1.8rem;
+  margin: 0 auto 2.5rem;
+}
+
+.footer-links a {
+  color: var(--color-light);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: var(--color-white);
 }
 
 .footer-socials {
+  display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
 }
 
 .footer-socials a {
-  background: var(--color-bg);
-  color: var(--color-white);
-  padding: 0.8rem;
-  border-radius: 0.7rem;
-  display: flex;
-  border: 1px solid transparent;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.3rem;
+  color: var(--color-light);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 0.9rem;
+  transition: var(--transition);
 }
 
 .footer-socials a:hover {
-  background: transparent;
-  color: var(--color-bg);
-  border-color: var(--color-bg);
+  color: #06121f;
+  background: var(--grad-brand);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px -14px rgba(56, 189, 248, 0.8);
 }
 
 .footer-copyright {
-  margin-bottom: 4rem;
-  color: var(--color-bg);
+  color: var(--color-muted);
 }
 
-@media screen and (max-width: 1024px) {
-}
 @media screen and (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    gap: 1.5rem;
+  footer {
+    margin-top: 5rem;
   }
-  .footer-socials {
-    margin-bottom: 2.6rem;
+  .footer-links {
+    gap: 1.2rem;
   }
 }

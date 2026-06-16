@@ -1,67 +1,91 @@
 .experience-container {
+  display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: start;
   gap: 2rem;
 }
 
-.experience-container > div {
-  background: var(--color-bg-variant);
-  padding: 2.4 5rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
+.experience-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px);
+  padding: 2.4rem 2rem;
+  border-radius: 1.8rem;
   transition: var(--transition);
-  padding-bottom: 1rem;
 }
 
-.experience-container > div:hover {
-  background: transparent;
-  border-color: var(--color-primary-variant);
-  cursor: default;
+.experience-panel:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 24px 60px -30px rgba(168, 85, 247, 0.5);
 }
 
-.experience-container > div h3 {
+.experience-panel h3 {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--color-primary);
+  font-size: 1.3rem;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.experience-content {
+.skills-grid {
+  display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
-  padding-bottom: 1rem;
-}
-
-.experience-details {
-  display: flex;
   gap: 1rem;
-  justify-content: center;
-  align-items: flex-start;
 }
 
-.experience-details-icon {
-  margin-top: 6px;
-  color: var(--color-primary);
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--glass-border);
+  transform: translateY(-3px);
+}
+
+.skill-icon {
+  font-size: 1.7rem;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.skill-meta h4 {
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+.skill-meta small {
+  font-size: 0.72rem;
 }
 
 @media screen and (max-width: 1024px) {
   .experience-container {
     grid-template-columns: 1fr;
   }
-  .experience-container > div {
-    width: 80%;
-    padding: 2rem;
-    margin: auto;
-  }
-
-  .experience-content {
-  }
 }
 
 @media screen and (max-width: 600px) {
-  .experience-container {
-    gap: 1rem;
+  .experience-panel {
+    padding: 1.8rem 1.2rem;
   }
-  .experience-container > div {
-    width: 100%;
-    padding: 2rem 1rem;
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+  }
+  .skill-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0.6rem;
   }
 }

@@ -1,58 +1,56 @@
 import '../assets/styles/nav.css'
 import { AiOutlineHome } from 'react-icons/ai'
 import { BiUser, BiBookOpen } from 'react-icons/bi'
-import { RiServiceLine } from 'react-icons/ri'
 import { MdWorkOutline } from 'react-icons/md'
 import { TbMessageCircle, TbSchool } from 'react-icons/tb'
-import { useState } from 'react'
+import { BsBriefcase } from 'react-icons/bs'
+import { useEffect, useState } from 'react'
+
+const links = [
+  { id: 'top', icon: <AiOutlineHome />, label: 'Home' },
+  { id: 'about', icon: <BiUser />, label: 'About' },
+  { id: 'experience', icon: <BiBookOpen />, label: 'Skills' },
+  { id: 'portfolio', icon: <BsBriefcase />, label: 'Projects' },
+  { id: 'job-experience', icon: <MdWorkOutline />, label: 'Work' },
+  { id: 'education', icon: <TbSchool />, label: 'Education' },
+  { id: 'contact', icon: <TbMessageCircle />, label: 'Contact' },
+]
 
 const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#')
+  const [activeNav, setActiveNav] = useState('top')
+
+  useEffect(() => {
+    const sections = links
+      .map(({ id }) => document.getElementById(id))
+      .filter(Boolean)
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActiveNav(entry.target.id)
+        })
+      },
+      { rootMargin: '-45% 0px -45% 0px' }
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
+  }, [])
 
   return (
     <nav>
-      <a
-        href='#'
-        onClick={() => setActiveNav('#')}
-        className={activeNav === '#' ? 'active' : ''}
-      >
-        <AiOutlineHome />
-      </a>
-      <a
-        href='#about'
-        onClick={() => setActiveNav('#about')}
-        className={activeNav === '#about' ? 'active' : ''}
-      >
-        <BiUser />
-      </a>
-      <a
-        href='#experience'
-        onClick={() => setActiveNav('#experience')}
-        className={activeNav === '#experience' ? 'active' : ''}
-      >
-        <BiBookOpen />
-      </a>
-      <a
-        href='#job-experience'
-        onClick={() => setActiveNav('#job-experience')}
-        className={activeNav === '#job-experience' ? 'active' : ''}
-      >
-        <MdWorkOutline />
-      </a>
-      <a
-        href='#education'
-        onClick={() => setActiveNav('#education')}
-        className={activeNav === '#education' ? 'active' : ''}
-      >
-        <TbSchool />
-      </a>
-      <a
-        href='#contact'
-        onClick={() => setActiveNav('#contact')}
-        className={activeNav === '#contact' ? 'active' : ''}
-      >
-        <TbMessageCircle />
-      </a>
+      {links.map(({ id, icon, label }) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          onClick={() => setActiveNav(id)}
+          className={activeNav === id ? 'active' : ''}
+          aria-label={label}
+        >
+          {icon}
+          <span className='nav-tooltip'>{label}</span>
+        </a>
+      ))}
     </nav>
   )
 }

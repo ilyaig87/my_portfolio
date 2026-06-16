@@ -1,68 +1,98 @@
 import '../assets/styles/portfolio.css'
+import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
 import IGAMES from '../../src/assets/images/cover.jpg'
 import CRITIC from '../../src/assets/images/critic.png'
 import WORKERR from '../../src/assets/images/workerr.png'
 
-const Portfolio = () => {
-  const data = [
-    {
-      id: 1,
-      image: YOUTUSE,
-      title: 'This is a youtube clone!',
-      github: 'https://github.com/ilyaig87/yotube_clone',
-      demo: 'https://youtuse.netlify.app/',
-    },
-    {
-      id: 2,
-      image: WORKERR,
-      title: `Workerr, (bootcamp's final project) is a full-stack web-app built
-      using React.js, Express-Node.js that
-      emulates Fivers's functionality. The app also uses a MongoDB
-      database.`,
-      github: 'https://github.com/ilyaig87/worker',
-      demo: 'https://react-reviews-vus7.onrender.com/#/',
-    },
-    {
-      id: 3,
-      image: CRITIC,
-      title: 'This is a epic movie and tv series site!',
-      github: 'https://github.com/ilyaig87/Critic',
-      demo: 'https://critics.netlify.app',
-    },
-    {
-      id: 4,
-      image: IGAMES,
-      title: 'This is a game site!',
-      github: 'https://github.com/ilyaig87/Memory-Game',
-      demo: 'https://i-games.netlify.app/',
-    },
-  ]
+const data = [
+  {
+    id: 1,
+    image: WORKERR,
+    title: 'Workerr',
+    description:
+      "My bootcamp's full-stack final project — a Fiverr-style marketplace built with React, Express & Node.js on a MongoDB database.",
+    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
+    github: 'https://github.com/ilyaig87/worker',
+    demo: 'https://react-reviews-vus7.onrender.com/#/',
+    featured: true,
+  },
+  {
+    id: 2,
+    image: CRITIC,
+    title: 'Critic',
+    description:
+      'An epic movie & TV series discovery app with rich browsing, search and detailed pages.',
+    tags: ['React', 'API', 'CSS'],
+    github: 'https://github.com/ilyaig87/Critic',
+    demo: 'https://critics.netlify.app',
+  },
+  {
+    id: 3,
+    image: YOUTUSE,
+    title: 'YouTuse',
+    description:
+      'A YouTube clone with video search, playback and a clean, responsive interface.',
+    tags: ['React', 'API'],
+    github: 'https://github.com/ilyaig87/yotube_clone',
+    demo: 'https://youtuse.netlify.app/',
+  },
+  {
+    id: 4,
+    image: IGAMES,
+    title: 'i-Games',
+    description:
+      'A playful memory game with smooth interactions and score tracking.',
+    tags: ['JavaScript', 'Game'],
+    github: 'https://github.com/ilyaig87/Memory-Game',
+    demo: 'https://memory-game-tawny-eta.vercel.app/',
+  },
+]
 
+const Portfolio = () => {
   return (
     <section id='portfolio'>
-      <h5>My Recent Projects</h5>
-      <h2>Portfolio</h2>
+      <h5 className='reveal'>My Recent Work</h5>
+      <h2 className='reveal'>Featured Projects</h2>
 
-      <div className='container portfolio-container grid'>
-        {data.map(({ id, image, title, github, demo }) => {
-          return (
-            <article className='portfolio-item' key={id}>
-              <div className='portfolio-item-image'>
-                <img src={image} alt={image} className='portfolio-img' />
-                <h3>{title}</h3>
-                <div className='buttons-portfolio flex'>
-                  <a href={github} target='_blank' className='btn'>
-                    Github
-                  </a>
-                  <a href={demo} target='_blank' className='btn btn-primary'>
-                    Check it here!
-                  </a>
-                </div>
+      <div className='container portfolio-container'>
+        {data.map(({ id, image, title, description, tags, github, demo, featured }) => (
+          <article
+            className={`portfolio-item reveal ${featured ? 'featured' : ''}`}
+            key={id}
+          >
+            <div className='portfolio-img-wrap'>
+              <img src={image} alt={title} className='portfolio-img' />
+              <div className='portfolio-overlay'>
+                <a href={github} target='_blank' rel='noreferrer' aria-label='GitHub'>
+                  <FiGithub />
+                </a>
+                <a href={demo} target='_blank' rel='noreferrer' aria-label='Live demo'>
+                  <FiExternalLink />
+                </a>
               </div>
-            </article>
-          )
-        })}
+              {featured && <span className='portfolio-badge'>⭐ Featured</span>}
+            </div>
+
+            <div className='portfolio-body'>
+              <h3>{title}</h3>
+              <p>{description}</p>
+              <ul className='portfolio-tags'>
+                {tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+              <div className='portfolio-links'>
+                <a href={github} target='_blank' rel='noreferrer' className='btn'>
+                  <FiGithub /> Code
+                </a>
+                <a href={demo} target='_blank' rel='noreferrer' className='btn btn-primary'>
+                  <FiExternalLink /> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   )
