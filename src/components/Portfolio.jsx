@@ -1,7 +1,7 @@
 import '../assets/styles/portfolio.css'
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
-import IGAMES from '../../src/assets/images/cover.jpg'
+import IGAMES from '../../src/assets/images/igames.png'
 import CRITIC from '../../src/assets/images/critic.png'
 import WORKERR from '../../src/assets/images/workerr.png'
 
