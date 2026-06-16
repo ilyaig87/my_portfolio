@@ -11,18 +11,23 @@ import {
   JobExperience,
   Education,
 } from './components/index.js'
+import useScrollReveal from './hooks/useScrollReveal'
 
 const App = () => {
+  useScrollReveal()
+
   return (
-    <div>
+    <div className='app'>
       <Header />
       <Nav />
-      <About />
-      <Experience />
-      <Portfolio />
-      <JobExperience />
-      <Education />
-      <Contact />
+      <main>
+        <About />
+        <Experience />
+        <Portfolio />
+        <JobExperience />
+        <Education />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )

@@ -1,76 +1,76 @@
-.education {
+.education-grid {
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
-.education-section {
-  margin-top: 0;
-  background: var(--color-bg-variant);
-  padding: 1.2rem;
-  border-radius: 2rem;
-  border: 1px solid transparent;
+.education-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  border-radius: 1.6rem;
+  padding: 2rem;
   transition: var(--transition);
 }
 
-.education-section:hover {
-  border-color: var(--color-primary-variant);
-  background: transparent;
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(168, 85, 247, 0.4);
+  box-shadow: 0 28px 60px -30px rgba(168, 85, 247, 0.55);
 }
 
-.education-complex {
-  color: var(--color-white);
-  gap: 2rem;
-  grid-template-columns: 25% 40%;
-  max-height: 5rem;
-}
-
-.education-prof {
-  flex-direction: column;
+.education-head {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  /* width: 11rem; */
+  gap: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
-.education-img {
-  align-items: center;
-  justify-content: center;
-  width: 6rem;
+.education-logo {
+  width: 4.2rem;
+  height: 4.2rem;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  display: grid;
+  place-items: center;
 }
 
-.education-about {
-  padding-top: 1.2rem;
-  text-align: center;
+.education-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.education-head h3 {
+  font-size: 1.25rem;
+}
+
+.education-head h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.education-head small {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+
+.education-card p {
   color: var(--color-light);
+  font-size: 0.94rem;
 }
 
 @media screen and (max-width: 1024px) {
-  .education {
+  .education-grid {
     grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .education-complex {
-    align-items: flex-start;
-  }
-  .education-img {
-    align-items: flex-start;
-    width: 6rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .education {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .education-img {
-    width: 4rem;
-  }
-  .education-complex {
-    grid-template-columns: 10% 75%;
-    align-items: center;
-    justify-content: center;
-  }
-  .education-about {
-    margin: 0;
+  .education-card {
+    padding: 1.6rem 1.3rem;
   }
 }
