@@ -42,8 +42,8 @@ const data = [
     image: IGAMES,
     title: 'i-Games',
     description:
-      'A playful memory game with smooth interactions and score tracking.',
-    tags: ['JavaScript', 'Game'],
+      'A hub of six handcrafted browser games — Memory, Tic-Tac-Toe & Minesweeper, plus Chess, Checkers & Backgammon against a real AI opponent.',
+    tags: ['JavaScript', 'Games', 'AI'],
     github: 'https://github.com/ilyaig87/Memory-Game',
     demo: 'https://memory-game-tawny-eta.vercel.app/',
   },
