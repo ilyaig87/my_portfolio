@@ -34,7 +34,7 @@ const data = [
   {
     id: 3,
     title: 'DataMap G.I.S Group',
-    profession: 'AutoCAD Drafter',
+    profession: 'CAD Engineer',
     date: '2020 — 2022',
     img: DATA,
     points: [

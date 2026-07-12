@@ -8,6 +8,7 @@ import CountUp from './CountUp'
 
 const ROLES = [
   'Full-Stack Developer',
+  'AI-Accelerated Development',
   'React & TypeScript',
   'PHP/Yii2 & MySQL',
   'CRM & FinTech Platforms',
@@ -61,9 +62,9 @@ const Header = () => {
             <Typewriter phrases={ROLES} />
           </h2>
           <p className='header-tagline'>
-            I build production-grade web platforms with React, TypeScript and
-            PHP/Yii2 — turning complex business logic into fast, reliable
-            products.
+            I build production-grade web platforms with React, PHP/Yii2 and
+            Node.js — using AI tools daily to ship faster without compromising
+            on quality.
           </p>
 
           <MyCv />

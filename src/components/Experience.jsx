@@ -15,9 +15,11 @@ import {
   SiGit,
   SiAmazon,
   SiGithubactions,
-  SiGooglechrome,
+  SiOpenai,
 } from 'react-icons/si'
-import { TbApi } from 'react-icons/tb'
+import { TbApi, TbPrompt } from 'react-icons/tb'
+import { BsStars } from 'react-icons/bs'
+import { FaRobot } from 'react-icons/fa'
 
 const groups = [
   {
@@ -48,12 +50,15 @@ const groups = [
     ],
   },
   {
-    title: 'Tools & DevOps',
+    title: 'AI & Developer Productivity',
     skills: [
+      { name: 'ChatGPT', icon: <SiOpenai />, color: '#10a37f' },
+      { name: 'Claude Code', icon: <BsStars />, color: '#d97757' },
+      { name: 'GitHub Copilot', icon: <FaRobot />, color: '#8957e5' },
+      { name: 'Prompt Engineering', icon: <TbPrompt />, color: '#ec4899' },
       { name: 'Git', icon: <SiGit />, color: '#f05032' },
       { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
       { name: 'AWS', icon: <SiAmazon />, color: '#ff9900' },
-      { name: 'Chrome DevTools', icon: <SiGooglechrome />, color: '#4285f4' },
       { name: 'CI/CD', icon: <SiGithubactions />, color: '#2088ff' },
     ],
   },

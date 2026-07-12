@@ -37,12 +37,11 @@ const About = () => {
           </div>
 
           <p className='reveal'>
-            Full-Stack Developer specializing in React, TypeScript, PHP/Yii2,
-            and MySQL, with end-to-end responsibility for a business-critical
-            CRM and vehicle-financing platform used daily by sales, finance, and
-            back-office teams. Experienced in translating complex operational
-            requirements into reliable production features, financial workflows,
-            database architecture, and third-party API integrations.
+            Full-Stack Developer with hands-on experience building and
+            maintaining production systems using React, PHP (Yii2), Node.js,
+            and MySQL. I use AI tools daily to speed up development, improve
+            code quality, and solve complex technical problems while taking
+            full responsibility for the code that reaches production.
           </p>
 
           <div className='about-langs reveal'>
