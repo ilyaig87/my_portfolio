@@ -237,6 +237,69 @@ img {
   border: 2px solid var(--color-bg);
 }
 
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 999;
+  background: var(--grad-brand);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* Cursor glow — ambient light that follows the mouse */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34rem;
+  height: 34rem;
+  z-index: 998;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.07) 0%,
+    rgba(168, 85, 247, 0.05) 35%,
+    transparent 70%
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@media (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* Typewriter caret */
+.typewriter .caret {
+  display: inline-block;
+  width: 3px;
+  height: 0.95em;
+  margin-left: 0.15em;
+  vertical-align: text-bottom;
+  background: var(--color-cyan);
+  border-radius: 2px;
+  animation: caret-blink 1s steps(2) infinite;
+}
+
+@keyframes caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
 /* Scroll-reveal animation */
 .reveal {
   opacity: 0;

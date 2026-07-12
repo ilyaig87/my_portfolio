@@ -11,6 +11,7 @@ import {
   JobExperience,
   Education,
 } from './components/index.js'
+import Effects from './components/Effects'
 import useScrollReveal from './hooks/useScrollReveal'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
 
   return (
     <div className='app'>
+      <Effects />
       <Header />
       <Nav />
       <main>

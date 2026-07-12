@@ -1,11 +1,44 @@
+import { useEffect, useRef } from 'react'
 import '../assets/styles/header.css'
 import MyCv from './MyCv'
 import ME from '../assets/images/me.jpg'
 import HeaderSocials from './HeaderSocials'
+import Typewriter from './Typewriter'
+import CountUp from './CountUp'
+
+const ROLES = [
+  'Full-Stack Developer',
+  'React & TypeScript',
+  'PHP/Yii2 & MySQL',
+  'CRM & FinTech Platforms',
+]
 
 const Header = () => {
+  const headerRef = useRef(null)
+
+  // Subtle parallax: background blobs and photo drift with the cursor
+  useEffect(() => {
+    const el = headerRef.current
+    if (!el) return
+    if (
+      !window.matchMedia('(pointer: fine)').matches ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    )
+      return
+
+    const onMove = (e) => {
+      const r = el.getBoundingClientRect()
+      const x = (e.clientX - r.left) / r.width - 0.5
+      const y = (e.clientY - r.top) / r.height - 0.5
+      el.style.setProperty('--par-x', x.toFixed(3))
+      el.style.setProperty('--par-y', y.toFixed(3))
+    }
+    el.addEventListener('mousemove', onMove, { passive: true })
+    return () => el.removeEventListener('mousemove', onMove)
+  }, [])
+
   return (
-    <header id='top'>
+    <header id='top' ref={headerRef}>
       <div className='header-bg'>
         <span className='blob blob-1'></span>
         <span className='blob blob-2'></span>
@@ -24,7 +57,9 @@ const Header = () => {
             Ilya Griss
             <span className='wave'>👋</span>
           </h1>
-          <h2 className='header-role gradient-text'>Full-Stack Developer</h2>
+          <h2 className='header-role gradient-text'>
+            <Typewriter phrases={ROLES} />
+          </h2>
           <p className='header-tagline'>
             I build production-grade web platforms with React, TypeScript and
             PHP/Yii2 — turning complex business logic into fast, reliable
@@ -36,15 +71,15 @@ const Header = () => {
 
           <ul className='header-stats'>
             <li>
-              <strong>2+</strong>
+              <CountUp end={2} suffix='+' />
               <span>Years experience</span>
             </li>
             <li>
-              <strong>~40%</strong>
+              <CountUp end={40} prefix='~' suffix='%' />
               <span>Faster workflows</span>
             </li>
             <li>
-              <strong>~50%</strong>
+              <CountUp end={50} prefix='~' suffix='%' />
               <span>Faster load times</span>
             </li>
           </ul>

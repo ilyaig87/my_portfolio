@@ -1,5 +1,5 @@
 import '../assets/styles/portfolio.css'
-import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { FiGithub, FiExternalLink, FiCheckCircle, FiStar } from 'react-icons/fi'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
 import IGAMES from '../../src/assets/images/igames.png'
 import CRITIC from '../../src/assets/images/critic.png'
@@ -10,42 +10,70 @@ const data = [
     id: 1,
     image: WORKERR,
     title: 'Workerr',
+    kicker: 'Full-Stack Marketplace',
     description:
       "My bootcamp's full-stack final project — a Fiverr-style marketplace built with React, Express & Node.js on a MongoDB database.",
+    highlights: [
+      'Gigs, orders and reviews — a complete end-to-end marketplace flow',
+      'Secure authentication and user accounts',
+      'Full MERN-style stack: React, Node.js, Express & MongoDB',
+    ],
     tags: ['React', 'Node.js', 'MongoDB', 'Express'],
     github: 'https://github.com/ilyaig87/worker',
     demo: 'https://react-reviews-vus7.onrender.com/#/',
+    displayUrl: 'workerr.app',
     featured: true,
   },
   {
     id: 2,
     image: CRITIC,
     title: 'Critic',
+    kicker: 'Movie & TV Discovery',
     description:
-      'An epic movie & TV series discovery app with rich browsing, search and detailed pages.',
-    tags: ['React', 'API', 'CSS'],
+      'A responsive movie and TV discovery application built with React and TypeScript — 199 hand-picked titles from around the world.',
+    highlights: [
+      'Real-time search with debouncing and smart rating filters',
+      'Pagination and integration with public REST APIs',
+      'Sleek dark UI with detailed pages for every title',
+    ],
+    tags: ['React', 'TypeScript', 'REST API'],
     github: 'https://github.com/ilyaig87/Critic',
     demo: 'https://critics.netlify.app',
+    displayUrl: 'critic.app',
   },
   {
     id: 3,
     image: YOUTUSE,
     title: 'YouTuse',
+    kicker: 'Video Platform Clone',
     description:
-      'A YouTube clone with video search, playback and a clean, responsive interface.',
+      'A YouTube clone with video search, playback and a clean, responsive interface powered by real API data.',
+    highlights: [
+      'Live video search and in-app playback',
+      'Category sidebar and channel browsing',
+      'Fully responsive, mobile-first layout',
+    ],
     tags: ['React', 'API'],
     github: 'https://github.com/ilyaig87/yotube_clone',
     demo: 'https://youtuse.netlify.app/',
+    displayUrl: 'youtuse.app',
   },
   {
     id: 4,
     image: IGAMES,
     title: 'i-Games',
+    kicker: 'Browser Gaming Hub',
     description:
       'A hub of six handcrafted browser games — Memory, Tic-Tac-Toe & Minesweeper, plus Chess, Checkers & Backgammon against a real AI opponent.',
+    highlights: [
+      'Six complete games in one place — free, no sign-up',
+      'Three games powered by a real, thinking AI engine',
+      'Built from scratch in vanilla JavaScript',
+    ],
     tags: ['JavaScript', 'Games', 'AI'],
     github: 'https://github.com/ilyaig87/Memory-Game',
     demo: 'https://memory-game-tawny-eta.vercel.app/',
+    displayUrl: 'i-games.play',
   },
 ]
 
@@ -55,44 +83,103 @@ const Portfolio = () => {
       <h5 className='reveal'>My Recent Work</h5>
       <h2 className='reveal'>Featured Projects</h2>
 
-      <div className='container portfolio-container'>
-        {data.map(({ id, image, title, description, tags, github, demo, featured }) => (
-          <article
-            className={`portfolio-item reveal ${featured ? 'featured' : ''}`}
-            key={id}
-          >
-            <div className='portfolio-img-wrap'>
-              <img src={image} alt={title} className='portfolio-img' />
-              <div className='portfolio-overlay'>
-                <a href={github} target='_blank' rel='noreferrer' aria-label='GitHub'>
-                  <FiGithub />
-                </a>
-                <a href={demo} target='_blank' rel='noreferrer' aria-label='Live demo'>
-                  <FiExternalLink />
-                </a>
+      <div className='container case-studies'>
+        {data.map(
+          (
+            {
+              id,
+              image,
+              title,
+              kicker,
+              description,
+              highlights,
+              tags,
+              github,
+              demo,
+              displayUrl,
+              featured,
+            },
+            i
+          ) => (
+            <article
+              className={`case-study reveal ${i % 2 === 1 ? 'reverse' : ''}`}
+              key={id}
+            >
+              <div className='case-media'>
+                <div className='browser-frame' data-tilt>
+                  <div className='browser-bar'>
+                    <span className='browser-dots'>
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </span>
+                    <span className='browser-url'>{displayUrl}</span>
+                  </div>
+                  <a
+                    href={demo}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='browser-viewport'
+                    aria-label={`Open ${title} live demo`}
+                  >
+                    <img src={image} alt={title} />
+                    <span className='viewport-cta'>
+                      <FiExternalLink /> Visit live site
+                    </span>
+                  </a>
+                  {featured && (
+                    <span className='case-badge'>
+                      <FiStar /> Featured
+                    </span>
+                  )}
+                </div>
               </div>
-              {featured && <span className='portfolio-badge'>⭐ Featured</span>}
-            </div>
 
-            <div className='portfolio-body'>
-              <h3>{title}</h3>
-              <p>{description}</p>
-              <ul className='portfolio-tags'>
-                {tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-              <div className='portfolio-links'>
-                <a href={github} target='_blank' rel='noreferrer' className='btn'>
-                  <FiGithub /> Code
-                </a>
-                <a href={demo} target='_blank' rel='noreferrer' className='btn btn-primary'>
-                  <FiExternalLink /> Live Demo
-                </a>
+              <div className='case-content'>
+                <span className='case-number'>
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span className='case-kicker'>{kicker}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+
+                <ul className='case-highlights'>
+                  {highlights.map((point, j) => (
+                    <li key={j}>
+                      <FiCheckCircle />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <ul className='portfolio-tags'>
+                  {tags.map((tag) => (
+                    <li key={tag}>{tag}</li>
+                  ))}
+                </ul>
+
+                <div className='portfolio-links'>
+                  <a
+                    href={github}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='btn'
+                  >
+                    <FiGithub /> Code
+                  </a>
+                  <a
+                    href={demo}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='btn btn-primary'
+                  >
+                    <FiExternalLink /> Live Demo
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          )
+        )}
       </div>
     </section>
   )
