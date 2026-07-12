@@ -19,7 +19,7 @@ const Footer = () => {
       <a href='#top' className='footer-logo gradient-text'>
         Ilya Griss
       </a>
-      <p className='footer-tagline'>Fullstack Developer · Building the web, one project at a time.</p>
+      <p className='footer-tagline'>Full-Stack Developer · Building the web, one project at a time.</p>
 
       <ul className='footer-links'>
         {navLinks.map(({ href, label }) => (

@@ -24,7 +24,7 @@ const options = [
     icon: <SiWhatsapp className='contact-option-icon' />,
     title: 'WhatsApp',
     value: '+972 54-636-1555',
-    link: 'https://api.whatsapp.com/send?phone=9720546361555',
+    link: 'https://api.whatsapp.com/send?phone=972546361555',
     cta: 'Send me a message',
   },
 ]
