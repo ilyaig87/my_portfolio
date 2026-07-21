@@ -6,6 +6,7 @@ import { FiMail } from 'react-icons/fi'
 const navLinks = [
   { href: '#top', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#ai-edge', label: 'AI' },
   { href: '#experience', label: 'Skills' },
   { href: '#portfolio', label: 'Projects' },
   { href: '#job-experience', label: 'Work' },

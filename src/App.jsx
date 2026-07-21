@@ -2,6 +2,7 @@ import './App.css'
 
 import {
   About,
+  AiEdge,
   Contact,
   Experience,
   Portfolio,
@@ -24,6 +25,7 @@ const App = () => {
       <Nav />
       <main>
         <About />
+        <AiEdge />
         <Experience />
         <Portfolio />
         <JobExperience />

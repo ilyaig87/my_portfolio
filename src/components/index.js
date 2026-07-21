@@ -1,4 +1,5 @@
 export { default as About } from './About'
+export { default as AiEdge } from './AiEdge'
 export { default as Contact } from './Contact'
 export { default as Portfolio } from './Portfolio'
 export { default as Header } from './Header'

@@ -3,12 +3,13 @@ import { AiOutlineHome } from 'react-icons/ai'
 import { BiUser, BiBookOpen } from 'react-icons/bi'
 import { MdWorkOutline } from 'react-icons/md'
 import { TbMessageCircle, TbSchool } from 'react-icons/tb'
-import { BsBriefcase } from 'react-icons/bs'
+import { BsBriefcase, BsStars } from 'react-icons/bs'
 import { useEffect, useState } from 'react'
 
 const links = [
   { id: 'top', icon: <AiOutlineHome />, label: 'Home' },
   { id: 'about', icon: <BiUser />, label: 'About' },
+  { id: 'ai-edge', icon: <BsStars />, label: 'AI' },
   { id: 'experience', icon: <BiBookOpen />, label: 'Skills' },
   { id: 'portfolio', icon: <BsBriefcase />, label: 'Projects' },
   { id: 'job-experience', icon: <MdWorkOutline />, label: 'Work' },
