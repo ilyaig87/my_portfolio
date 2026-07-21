@@ -3,25 +3,24 @@ import { FiGithub, FiExternalLink, FiCheckCircle, FiStar } from 'react-icons/fi'
 import YOUTUSE from '../../src/assets/images/youtuse.png'
 import IGAMES from '../../src/assets/images/igames.png'
 import CRITIC from '../../src/assets/images/critic.png'
-import WORKERR from '../../src/assets/images/workerr.png'
+import INDICATOR from '../../src/assets/images/indicator.png'
 
 const data = [
   {
     id: 1,
-    image: WORKERR,
-    title: 'Workerr',
-    kicker: 'Full-Stack Marketplace',
+    image: INDICATOR,
+    title: 'Indicator',
+    kicker: 'Stock-Market E-Learning Platform',
     description:
-      "My bootcamp's full-stack final project — a Fiverr-style marketplace built with React, Express & Node.js on a MongoDB database.",
+      'A production e-learning platform for stock-market courses, built end-to-end with Next.js, TypeScript & PostgreSQL — serving paying customers in production.',
     highlights: [
-      'Gigs, orders and reviews — a complete end-to-end marketplace flow',
-      'Secure authentication and user accounts',
-      'Full MERN-style stack: React, Node.js, Express & MongoDB',
+      'Card payments with automated invoicing, transactional emails and full authentication (Clerk)',
+      'Student area with lesson player and progress tracking',
+      'Custom CMS built from scratch for live, in-place content editing, plus an admin panel — deployed on Vercel',
     ],
-    tags: ['React', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com/ilyaig87/worker',
-    demo: 'https://react-reviews-vus7.onrender.com/#/',
-    displayUrl: 'workerr.app',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Clerk', 'Vercel'],
+    demo: 'https://indicator.co.il/',
+    displayUrl: 'indicator.co.il',
     featured: true,
   },
   {
@@ -159,14 +158,16 @@ const Portfolio = () => {
                 </ul>
 
                 <div className='portfolio-links'>
-                  <a
-                    href={github}
-                    target='_blank'
-                    rel='noreferrer'
-                    className='btn'
-                  >
-                    <FiGithub /> Code
-                  </a>
+                  {github && (
+                    <a
+                      href={github}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='btn'
+                    >
+                      <FiGithub /> Code
+                    </a>
+                  )}
                   <a
                     href={demo}
                     target='_blank'

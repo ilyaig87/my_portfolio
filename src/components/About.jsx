@@ -22,12 +22,12 @@ const About = () => {
             <article className='about-card reveal'>
               <BsBriefcase className='about-icon' />
               <h5>Experience</h5>
-              <small>Full-Stack · 2+ yrs</small>
+              <small>Full-Stack · 3+ yrs</small>
             </article>
             <article className='about-card reveal'>
               <ImBooks className='about-icon' />
               <h5>Tech Stack</h5>
-              <small>React · TS · PHP</small>
+              <small>React · Next.js · Node</small>
             </article>
             <article className='about-card reveal'>
               <FiAward className='about-icon' />
@@ -37,11 +37,14 @@ const About = () => {
           </div>
 
           <p className='reveal'>
-            Full-Stack Developer with hands-on experience building and
-            maintaining production systems using React, PHP (Yii2), Node.js,
-            and MySQL. I use AI tools daily to speed up development, improve
-            code quality, and solve complex technical problems while taking
-            full responsibility for the code that reaches production.
+            Full-Stack Web Developer with 3+ years building and shipping
+            production systems end-to-end — React &amp; Next.js frontends,
+            Node.js/PHP backends, REST APIs and relational databases.
+            Experienced across the full lifecycle: requirements, architecture,
+            development, testing, deployment and production support. Comfortable
+            with AI-assisted development (Claude, GitHub Copilot) — including
+            reviewing and validating AI-generated code — and takes full
+            ownership of clean, maintainable, production-ready software.
           </p>
 
           <div className='about-langs reveal'>

@@ -9,8 +9,8 @@ import CountUp from './CountUp'
 const ROLES = [
   'Full-Stack Developer',
   'AI-Accelerated Development',
-  'React & TypeScript',
-  'PHP/Yii2 & MySQL',
+  'React & Next.js',
+  'Node.js & PHP/Yii2',
   'CRM & FinTech Platforms',
 ]
 
@@ -72,15 +72,15 @@ const Header = () => {
 
           <ul className='header-stats'>
             <li>
-              <CountUp end={2} suffix='+' />
+              <CountUp end={3} suffix='+' />
               <span>Years experience</span>
             </li>
             <li>
-              <CountUp end={40} prefix='~' suffix='%' />
+              <CountUp end={25} prefix='~' suffix='%' />
               <span>Faster workflows</span>
             </li>
             <li>
-              <CountUp end={50} prefix='~' suffix='%' />
+              <CountUp end={30} prefix='~' suffix='%' />
               <span>Faster load times</span>
             </li>
           </ul>

@@ -1,5 +1,4 @@
 import '../assets/styles/jobExperience.css'
-import DATA from '../assets/images/data-map.png'
 import { FaCarSide, FaLaptopCode } from 'react-icons/fa'
 
 const data = [
@@ -10,35 +9,25 @@ const data = [
     date: '2024 — Present',
     icon: <FaCarSide />,
     points: [
-      "Serve as the primary developer and technical owner of the company's business-critical CRM and vehicle-financing platform using React, PHP/Yii2, and MySQL.",
-      'Designed and implemented end-to-end vehicle-financing workflows covering customer onboarding, loan calculations, document processing, status tracking, and internal back-office operations.',
-      'Translate business and operational requirements into production-ready features, managing database schema design and building secure backend services.',
-      'Developed financial calculators and workflow automations that reduced manual application processing time by approximately 40% by centralizing customer, vehicle, and financing data within the CRM.',
-      'Reduced average page load times by approximately 35% through database query optimization, backend caching, and frontend lazy loading.',
-      'Provide ongoing production support for a business-critical system, diagnose cross-stack issues, and deliver urgent fixes and high-priority features with minimal disruption to daily operations.',
+      "Sole Full-Stack Developer owning the company's business-critical CRM and vehicle-financing platform (React, PHP/Yii2, MySQL) — from database design through backend services to frontend implementation.",
+      'Built and maintain end-to-end financing workflows: customer onboarding, loan processing, document management, payment calculations and internal operational tools.',
+      'Automated manual workflows with internal tools, reducing financing-application processing time by ~25% and cutting repetitive manual data entry across the team.',
+      'Improved performance through database query optimization, backend caching and frontend lazy loading — reducing core CRM dashboard and financial-report load times by ~30%.',
+      'Debug and resolve production issues across frontend, backend, REST APIs and database layers, shipping high-priority features with minimal disruption to business operations.',
+      'Partner directly with business stakeholders to define requirements, prioritize the roadmap and deliver production-ready solutions.',
     ],
   },
   {
     id: 2,
     title: 'Freelance',
     profession: 'Full-Stack Developer',
-    date: '2022 — 2024',
+    date: 'Nov 2022 — Present',
     icon: <FaLaptopCode />,
     points: [
-      'Developed and delivered responsive web applications using React, Node.js, Express, and relational/NoSQL databases for various client business needs.',
-      'Built reusable UI components, secure authentication systems, custom admin dashboards, and seamless integrations with third-party REST APIs.',
-      'Worked directly with clients to define technical requirements, scope MVPs, and deploy production features from initial wireframes to server hosting.',
-      'Diagnosed frontend bottlenecks using Chrome DevTools and improved page load times by up to 50% through asset optimization, code splitting, and state management improvements.',
-    ],
-  },
-  {
-    id: 3,
-    title: 'DataMap G.I.S Group',
-    profession: 'CAD Engineer',
-    date: '2020 — 2022',
-    img: DATA,
-    points: [
-      'Created technical drawings and engineering schematics while working in a structured, deadline-driven technical environment.',
+      'Indicator (indicator.co.il) — built and shipped a production e-learning platform for stock-market courses (Next.js, TypeScript, PostgreSQL): card payments with automated invoicing and transactional emails, a student area with lesson player and progress tracking, and full authentication (Clerk).',
+      'Designed a custom CMS from scratch for live, in-place editing of all site content, plus an admin panel for managing courses, students and purchases — deployed on Vercel, serving paying customers end-to-end.',
+      'Developed and deployed an AI-powered educational web application (Next.js/Vercel), owning end-to-end architecture, UI design, branding and dynamic feature implementation.',
+      'Managed projects end-to-end — requirements, technical planning, deployment, testing and production support — while optimizing performance, responsiveness and SEO.',
     ],
   },
 ]

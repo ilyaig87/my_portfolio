@@ -1,6 +1,7 @@
 import '../assets/styles/experience.css'
 import {
   SiReact,
+  SiNextdotjs,
   SiTypescript,
   SiJavascript,
   SiHtml5,
@@ -13,11 +14,12 @@ import {
   SiPostgresql,
   SiMongodb,
   SiGit,
+  SiGithub,
   SiAmazon,
+  SiVercel,
   SiGithubactions,
-  SiOpenai,
 } from 'react-icons/si'
-import { TbApi, TbPrompt } from 'react-icons/tb'
+import { TbApi, TbShieldLock } from 'react-icons/tb'
 import { BsStars } from 'react-icons/bs'
 import { FaRobot } from 'react-icons/fa'
 
@@ -26,6 +28,7 @@ const groups = [
     title: 'Frontend',
     skills: [
       { name: 'React', icon: <SiReact />, color: '#61dafb' },
+      { name: 'Next.js', icon: <SiNextdotjs />, color: '#e5e7eb' },
       { name: 'TypeScript', icon: <SiTypescript />, color: '#3178c6' },
       { name: 'JavaScript', icon: <SiJavascript />, color: '#f7df1e' },
       { name: 'HTML5', icon: <SiHtml5 />, color: '#e34f26' },
@@ -34,32 +37,33 @@ const groups = [
     ],
   },
   {
-    title: 'Backend',
+    title: 'Backend & APIs',
     skills: [
-      { name: 'PHP / Yii2', icon: <SiPhp />, color: '#777bb4' },
       { name: 'Node.js', icon: <SiNodedotjs />, color: '#3c873a' },
       { name: 'Express', icon: <SiExpress />, color: '#dddddd' },
+      { name: 'PHP / Yii2', icon: <SiPhp />, color: '#777bb4' },
+      { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
+      { name: 'Auth', icon: <TbShieldLock />, color: '#f59e0b' },
     ],
   },
   {
-    title: 'Databases',
+    title: 'Databases & DevOps',
     skills: [
-      { name: 'MySQL', icon: <SiMysql />, color: '#4479a1' },
       { name: 'PostgreSQL', icon: <SiPostgresql />, color: '#4169e1' },
+      { name: 'MySQL', icon: <SiMysql />, color: '#4479a1' },
       { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248' },
+      { name: 'Git', icon: <SiGit />, color: '#f05032' },
+      { name: 'GitHub', icon: <SiGithub />, color: '#e5e7eb' },
+      { name: 'GitHub Actions', icon: <SiGithubactions />, color: '#2088ff' },
+      { name: 'Vercel', icon: <SiVercel />, color: '#e5e7eb' },
+      { name: 'AWS', icon: <SiAmazon />, color: '#ff9900' },
     ],
   },
   {
-    title: 'AI & Developer Productivity',
+    title: 'AI-Assisted Development',
     skills: [
-      { name: 'ChatGPT', icon: <SiOpenai />, color: '#10a37f' },
       { name: 'Claude Code', icon: <BsStars />, color: '#d97757' },
       { name: 'GitHub Copilot', icon: <FaRobot />, color: '#8957e5' },
-      { name: 'Prompt Engineering', icon: <TbPrompt />, color: '#ec4899' },
-      { name: 'Git', icon: <SiGit />, color: '#f05032' },
-      { name: 'REST APIs', icon: <TbApi />, color: '#38bdf8' },
-      { name: 'AWS', icon: <SiAmazon />, color: '#ff9900' },
-      { name: 'CI/CD', icon: <SiGithubactions />, color: '#2088ff' },
     ],
   },
 ]
