@@ -1,4 +1,5 @@
 import '../assets/styles/aiEdge.css'
+import Terminal from './Terminal'
 import { BsStars } from 'react-icons/bs'
 import { SiOpenai } from 'react-icons/si'
 import { FaRobot } from 'react-icons/fa'
@@ -58,6 +59,10 @@ const AiEdge = () => {
             decision that ships to production. It&apos;s not a gimmick in my
             workflow; it&apos;s how I deliver more, faster, and better.
           </p>
+        </div>
+
+        <div className='ai-terminal-wrap'>
+          <Terminal />
         </div>
 
         <div className='ai-pillars'>

@@ -47,6 +47,77 @@
   --container-width-sm: 92%;
 }
 
+/* ===== Light theme ===== */
+:root[data-theme='light'] {
+  --color-bg: #eef1f8;
+  --color-bg-2: #ffffff;
+  --color-bg-variant: rgba(15, 23, 42, 0.04);
+  --color-primary-variant: rgba(15, 23, 42, 0.08);
+  --color-primary: #0284c7;
+  --color-white: #0b1220;
+  --color-light: #47546b;
+  --color-muted: #64748b;
+  --grad-text: linear-gradient(120deg, #0891b2 0%, #2563eb 50%, #9333ea 100%);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(15, 23, 42, 0.1);
+  --glass-shadow: 0 24px 60px -24px rgba(15, 23, 42, 0.2);
+}
+
+:root[data-theme='light'] body::before {
+  background:
+    radial-gradient(60rem 60rem at 12% -10%, rgba(56, 189, 248, 0.14), transparent 60%),
+    radial-gradient(50rem 50rem at 100% 10%, rgba(168, 85, 247, 0.12), transparent 55%),
+    radial-gradient(50rem 50rem at 50% 110%, rgba(59, 130, 246, 0.1), transparent 60%),
+    var(--color-bg);
+}
+
+:root[data-theme='light'] body::after {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.045) 1px, transparent 1px);
+}
+
+/* Flip hardcoded white-alpha surfaces to subtle dark-alpha for light mode */
+:root[data-theme='light'] .skill-card,
+:root[data-theme='light'] .ai-pillar,
+:root[data-theme='light'] .ai-toolbelt li,
+:root[data-theme='light'] .contact-option,
+:root[data-theme='light'] .education-card,
+:root[data-theme='light'] .timeline-card,
+:root[data-theme='light'] .browser-bar,
+:root[data-theme='light'] .browser-url,
+:root[data-theme='light'] nav,
+:root[data-theme='light'] .tech-marquee,
+:root[data-theme='light'] .cmdk-item-icon {
+  background: rgba(15, 23, 42, 0.035);
+}
+
+:root[data-theme='light'] .skill-card:hover,
+:root[data-theme='light'] .ai-pillar:hover,
+:root[data-theme='light'] .ai-toolbelt li:hover {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+/* Cards/panels that use white borders → darker in light mode */
+:root[data-theme='light'] .availability-badge,
+:root[data-theme='light'] .floating-chip,
+:root[data-theme='light'] .header-socials a,
+:root[data-theme='light'] .about-card {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Keep the command palette + terminal dark for contrast (like Spotlight) */
+:root[data-theme='light'] .cmdk-panel {
+  background: linear-gradient(180deg, #141a2c, #0b0f1f);
+  color: #f4f6fb;
+}
+:root[data-theme='light'] .cmdk-item {
+  color: #9aa6c4;
+}
+:root[data-theme='light'] .cmdk-item.is-active {
+  color: #ffffff;
+}
+
 html {
   scroll-behavior: smooth;
 }

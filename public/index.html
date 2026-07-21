@@ -79,5 +79,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Set theme before paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme') || 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
   </body>
 </html>

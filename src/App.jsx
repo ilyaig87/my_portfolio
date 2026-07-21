@@ -16,15 +16,19 @@ import Effects from './components/Effects'
 import Preloader from './components/Preloader'
 import CommandPalette from './components/CommandPalette'
 import TechMarquee from './components/TechMarquee'
+import ThemeToggle from './components/ThemeToggle'
 import useScrollReveal from './hooks/useScrollReveal'
+import useScrambleHeadings from './hooks/useScrambleHeadings'
 
 const App = () => {
   useScrollReveal()
+  useScrambleHeadings()
 
   return (
     <div className='app'>
       <Preloader />
       <Effects />
+      <ThemeToggle />
       <CommandPalette />
       <Header />
       <TechMarquee />
