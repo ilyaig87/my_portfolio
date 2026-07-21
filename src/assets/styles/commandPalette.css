@@ -1,0 +1,213 @@
+/* ===== Trigger button (top-right) ===== */
+.cmdk-trigger {
+  position: fixed;
+  top: 1.4rem;
+  right: 1.4rem;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-light);
+  background: rgba(11, 15, 31, 0.6);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cmdk-trigger:hover {
+  color: var(--color-white);
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-2px);
+}
+
+.cmdk-trigger kbd {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  color: var(--color-white);
+}
+
+.cmdk-trigger > span {
+  display: inline;
+}
+
+/* ===== Overlay ===== */
+.cmdk-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 14vh;
+  background: rgba(3, 5, 12, 0.62);
+  backdrop-filter: blur(6px);
+  animation: cmdk-fade 0.18s ease;
+}
+
+.cmdk-panel {
+  width: min(92vw, 40rem);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.1rem;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(20, 26, 44, 0.98), rgba(11, 15, 31, 0.98));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 40px 90px -30px rgba(0, 0, 0, 0.9),
+    0 0 0 1px rgba(56, 189, 248, 0.08);
+  animation: cmdk-pop 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ===== Search ===== */
+.cmdk-search {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.cmdk-search svg {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.cmdk-search input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--color-white);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.cmdk-search input::placeholder {
+  color: var(--color-muted);
+}
+
+.cmdk-search kbd,
+.cmdk-foot kbd {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.68rem;
+  padding: 0.12rem 0.4rem;
+  border-radius: 0.35rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--glass-border);
+  color: var(--color-light);
+}
+
+/* ===== List ===== */
+.cmdk-list {
+  overflow-y: auto;
+  padding: 0.5rem;
+  scrollbar-width: thin;
+}
+
+.cmdk-group {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  padding: 0.7rem 0.7rem 0.3rem;
+}
+
+.cmdk-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.65rem 0.7rem;
+  border-radius: 0.6rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-light);
+  font-size: 0.92rem;
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.cmdk-item.is-active {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.14), rgba(168, 85, 247, 0.12));
+  color: var(--color-white);
+}
+
+.cmdk-item-icon {
+  display: grid;
+  place-items: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.cmdk-item-label {
+  flex: 1;
+}
+
+.cmdk-item-enter {
+  display: grid;
+  place-items: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.cmdk-empty {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== Footer ===== */
+.cmdk-foot {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.7rem 1.1rem;
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+
+.cmdk-foot span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+@keyframes cmdk-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cmdk-pop {
+  from { opacity: 0; transform: translateY(-10px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media screen and (max-width: 600px) {
+  .cmdk-trigger > span {
+    display: none;
+  }
+  .cmdk-trigger {
+    top: 1rem;
+    right: 1rem;
+  }
+}

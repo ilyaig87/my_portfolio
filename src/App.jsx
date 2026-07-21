@@ -13,6 +13,9 @@ import {
   Education,
 } from './components/index.js'
 import Effects from './components/Effects'
+import Preloader from './components/Preloader'
+import CommandPalette from './components/CommandPalette'
+import TechMarquee from './components/TechMarquee'
 import useScrollReveal from './hooks/useScrollReveal'
 
 const App = () => {
@@ -20,8 +23,11 @@ const App = () => {
 
   return (
     <div className='app'>
+      <Preloader />
       <Effects />
+      <CommandPalette />
       <Header />
+      <TechMarquee />
       <Nav />
       <main>
         <About />
